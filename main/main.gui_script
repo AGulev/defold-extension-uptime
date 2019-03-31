@@ -1,0 +1,18 @@
+local function update_uptime(self)
+	if uptime then
+		gui.set_text(self.txt_uptime, uptime.get())
+	end
+end
+
+function init(self)
+	self.txt_uptime = gui.get_node("uptime")
+	self.btn_update = gui.get_node("update")
+	update_uptime(self)
+	msg.post(".", "acquire_input_focus")
+end
+
+function on_input(self, action_id, action)
+	if action_id == hash('click') and action.pressed then
+		update_uptime(self)
+	end
+end
