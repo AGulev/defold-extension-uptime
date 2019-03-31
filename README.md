@@ -1,13 +1,33 @@
-# Welcome to Defold
+# UpTime
 
-This project was created from the "empty" project template.
+UpTime [Native Extension](https://www.defold.com/manuals/extensions/) for the [Defold Game Engine](https://www.defold.com) (iOS, MacOS and Android).
 
-The settings in ["game.project"](defold://open?path=/game.project) are all the default. A bootstrap empty ["main.collection"](defold://open?path=/main/main.collection) is included.
+This Defold Native Extension allows receiving a system uptime.
 
-Check out [the documentation pages](https://defold.com/learn) for examples, tutorials, manuals and API docs.
+## Setup
 
-If you run into trouble, help is available in [our forum](https://forum.defold.com).
+You can use the UpTime extension in your own project by adding this project as a [Defold library dependency](https://www.defold.com/manuals/libraries/). Open your game.project file and in the dependencies field under project add:
 
-Happy Defolding!
+> https://github.com/AGulev/uptime/archive/master.zip
 
----# uptime
+Or point to the ZIP file of a [specific release](https://github.com/AGulev/uptime/releases).
+
+## API
+
+#### `uptime.get()`
+
+Returns system uptime in seconds.
+
+```lua
+local function update_uptime(self)
+  if uptime then
+    local uptime = uptime.get()
+    print(uptime) -- 809031
+  end
+end
+
+```
+
+## Issues and suggestions
+
+If you have any issues, questions or suggestions please [create an issue](https://github.com/AGulev/uptime/issues) or contact me: me@agulev.com
