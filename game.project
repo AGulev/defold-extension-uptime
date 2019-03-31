@@ -14,3 +14,6 @@ title = uptime
 [ios]
 bundle_identifier = com.agulev.test
 
+[library]
+include_dirs = uptime
+
