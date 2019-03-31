@@ -1,6 +1,13 @@
 # UpTime
 
-UpTime [Native Extension](https://www.defold.com/manuals/extensions/) for the [Defold Game Engine](https://www.defold.com) (**iOS**, **MacOS** and **Android**).
+UpTime [Native Extension](https://www.defold.com/manuals/extensions/) for the [Defold Game Engine](https://www.defold.com) 
+
+## Platforms
+
+* **iOS**
+* **MacOS**
+* **Android**
+* **Windows**
 
 This Defold Native Extension allows receiving a system uptime.
 **This timer resets when user restarts their device!**
