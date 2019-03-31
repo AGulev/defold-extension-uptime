@@ -4,9 +4,9 @@
 
 #define DLIB_LOG_DOMAIN LIB_NAME
 #include <dmsdk/sdk.h>
-#include "UpTime.h"
 
-#if defined(DM_PLATFORM_IOS) || defined(DM_PLATFORM_ANDROID) || defined(DM_PLATFORM_OSX)
+#if defined(DM_PLATFORM_IOS) || defined(DM_PLATFORM_ANDROID) || defined(DM_PLATFORM_OSX) || defined(DM_PLATFORM_WINDOWS)
+#include "UpTime.h"
 
 dmExtension::Result AppInitializeUpTime(dmExtension::AppParams* params)
 {
@@ -59,5 +59,10 @@ dmExtension::Result AppFinalizeUpTime(dmExtension::AppParams* params)
   return dmExtension::RESULT_OK;
 }
 
-DM_DECLARE_EXTENSION(EXTENSION_NAME, LIB_NAME, AppInitializeUpTime, AppFinalizeUpTime, 0, 0, 0, 0)
+dmExtension::Result InitializeUpTime(dmExtension::Params* params)
+{
+  return dmExtension::RESULT_OK;
+}
+
+DM_DECLARE_EXTENSION(EXTENSION_NAME, LIB_NAME, AppInitializeUpTime, AppFinalizeUpTime, InitializeUpTime, 0, 0, 0)
 #endif
