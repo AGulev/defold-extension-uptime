@@ -2,13 +2,6 @@
 
 UpTime [Native Extension](https://www.defold.com/manuals/extensions/) for the [Defold Game Engine](https://www.defold.com) 
 
-## Platforms
-
-* **iOS**
-* **MacOS**
-* **Android**
-* **Windows**
-
 This Defold Native Extension allows receiving a system uptime.
 **This timer resets when user restarts their device!**
 
@@ -16,6 +9,13 @@ Possible use cases:
 
 * If you want to use a timer for restore lives (or something else) in your game without server but want to have better protection against cheaters who just change system time.
 * Seed for math.randomseed() (thanks @dragosha for that use case idea)
+
+## Platforms
+
+* **iOS**
+* **MacOS**
+* **Android**
+* **Windows**
 
 ## Setup
 
