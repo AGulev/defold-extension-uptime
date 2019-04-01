@@ -65,4 +65,5 @@ dmExtension::Result InitializeUpTime(dmExtension::Params* params)
 }
 
 DM_DECLARE_EXTENSION(EXTENSION_NAME, LIB_NAME, AppInitializeUpTime, AppFinalizeUpTime, InitializeUpTime, 0, 0, 0)
+
 #endif

@@ -1,5 +1,6 @@
 #if defined(DM_PLATFORM_ANDROID)
-#include "UpTime.h"
+#include <jni.h>
+#include <dmsdk/sdk.h>
 
 namespace {
   struct ThreadAttacher {
@@ -56,4 +57,5 @@ uint32_t UpTime_get()
 
   return (uint32_t)(upTime * 0.001f);
 }
+
 #endif
