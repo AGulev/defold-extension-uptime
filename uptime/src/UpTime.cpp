@@ -20,6 +20,7 @@ dmExtension::Result AppFinalizeUpTime(dmExtension::AppParams* params)
 }
 
 static int GetUpTime(lua_State* L) {
+  DM_LUA_STACK_CHECK(L, 1);
   uint32_t upTime = UpTime_get();
   lua_pushnumber(L, upTime);
   return 1;
