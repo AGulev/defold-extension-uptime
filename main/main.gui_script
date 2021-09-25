@@ -9,10 +9,28 @@ function init(self)
 	self.btn_update = gui.get_node("update")
 	update_uptime(self)
 	msg.post(".", "acquire_input_focus")
+	window.set_listener(
+	function(self, event, data)
+		if event == window.WINDOW_EVENT_FOCUS_LOST then
+			gui.set_text(gui.get_node("lost"), "focus lost:\n"..uptime.get())
+		elseif event == window.WINDOW_EVENT_FOCUS_GAINED then
+			gui.set_text(gui.get_node("gained"), "focus gained:\n"..uptime.get())
+		elseif event == window.WINDOW_EVENT_ICONFIED then
+			print("window.WINDOW_EVENT_ICONFIED")
+		elseif event == window.WINDOW_EVENT_DEICONIFIED then
+			print("window.WINDOW_EVENT_DEICONIFIED")
+		elseif event == window.WINDOW_EVENT_RESIZED then
+			print("Window resized: ", data.width, data.height)
+		end
+	end)	
 end
 
 function on_input(self, action_id, action)
 	if action_id == hash('click') and action.pressed then
 		update_uptime(self)
 	end
+end
+
+function update()
+	gui.set_text(gui.get_node("updatef"), uptime.get())
 end
