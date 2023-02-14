@@ -17,13 +17,10 @@ This Defold Native Extension allows receiving a system uptime.
 * **Android**
 * **Windows**
 
-## Setup
+## Installation
+To use this library in your Defold project, add the needed version URL to your `game.project` dependencies from [Releases](https://github.com/AGulev/defold-extension-uptime/releases)
 
-You can use the UpTime extension in your own project by adding this project as a [Defold library dependency](https://www.defold.com/manuals/libraries/). Open your game.project file and in the dependencies field under project add:
-
-> https://github.com/AGulev/uptime/archive/master.zip
-
-Or point to the ZIP file of a [specific release](https://github.com/AGulev/uptime/releases).
+<img width="401" alt="image" src="https://user-images.githubusercontent.com/2209596/202223571-c77f0304-5202-4314-869d-7a90bbeec5ec.png">
 
 ## API
 
